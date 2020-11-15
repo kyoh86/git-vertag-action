@@ -1,5 +1,10 @@
 name: Git Vertag
+author: kyoh86
 description: Put new git tag for next semantic version
+branding:
+  icon: at-sign
+  color: gray-dark
+
 inputs:
   method:
     description: |
