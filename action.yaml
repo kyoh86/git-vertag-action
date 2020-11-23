@@ -11,6 +11,11 @@ inputs:
       Which number to increment in the semantic versioning.
       Set 'major', 'minor', 'patch' or 'get'.
     required: true
+  push:
+    description: |
+      If the new tag should be pushed, set "true".
+    required: false
+    default: 'false'
 outputs:
   vertag:
     description: New tag with semantic version
@@ -19,3 +24,4 @@ runs:
   image: Dockerfile
   args:
     - ${{ inputs.method }}
+    - ${{ inputs.push }}
