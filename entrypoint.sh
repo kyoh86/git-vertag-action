@@ -6,9 +6,9 @@ method="${1}"
 push="${2}"
 
 if [ "${push}" != "true" ]; then
-  push=""
+  git-vertag --fetch "${method}"
+else
+  git-vertag --fetch "${method}" --push-to origin
 fi
-
-git-vertag --fetch "${method}" ${push:+"--push-to origin"}
 
 echo "::set-output name=vertag::$(git-vertag get)"
