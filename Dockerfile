@@ -2,7 +2,7 @@
 #
 # Usage:
 #   steps:
-#     - uses: actions/checkout@v2
+#     - uses: actions/checkout@v3
 #     - uses: kyoh86/git-vertag-action@v1
 FROM ghcr.io/kyoh86/git-vertag:v2.0.4
 ADD ./entrypoint.sh /entrypoint.sh

@@ -6,7 +6,7 @@ An GitHub action image to put local new git tag for next semantic version
 
 ```yaml
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: kyoh86/git-vertag-action@v1
         with:
           method: minor  # "major", "minor", "patch" or "get"
