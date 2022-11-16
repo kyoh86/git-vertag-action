@@ -11,4 +11,4 @@ else
   git-vertag --fetch "${method}" --push-to origin
 fi
 
-echo "::set-output name=vertag::$(git-vertag get)"
+echo "vertag=$(git-vertag get) >> $GITHUB_OUTPUT"
