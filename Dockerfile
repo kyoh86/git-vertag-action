@@ -4,6 +4,6 @@
 #   steps:
 #     - uses: actions/checkout@v3
 #     - uses: kyoh86/git-vertag-action@v1
-FROM ghcr.io/kyoh86/git-vertag:v2.0.4
+FROM ghcr.io/kyoh86/git-vertag:v2.1.5
 ADD ./entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

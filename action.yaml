@@ -8,8 +8,13 @@ inputs:
   method:
     description: |
       Which number to increment in the semantic versioning.
-      Set 'major', 'minor', 'patch' or 'get'.
+      Set 'major', 'minor', 'patch', 'get' or 'validate'.
     required: true
+  tag:
+    description: |
+      Tag to validate when method is 'validate'.
+      If omitted, validates tags pointing at HEAD.
+    required: false
   push:
     description: |
       If the new tag should be pushed, set "true".
@@ -17,10 +22,11 @@ inputs:
     default: 'false'
 outputs:
   vertag:
-    description: New tag with semantic version
+    description: Semantic version tag from the selected method
 runs:
   using: docker
   image: Dockerfile
   args:
     - ${{ inputs.method }}
     - ${{ inputs.push }}
+    - ${{ inputs.tag }}
